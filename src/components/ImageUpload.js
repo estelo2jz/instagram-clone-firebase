@@ -67,13 +67,17 @@ function ImageUpload({ username }) {
   }
 
   return (
-    <div>
+    <div className="imageUpload">
       image uploader
       {/* I want to have.... */}
       {/* Caption input */}
       {/* File picker */}
       {/* Post button */}
-      <progress value={progress} max="100" />
+      <progress 
+        className="imageUpload__progress" 
+        value={progress} 
+        max="100" 
+      />
       <input 
         type="text" 
         placeholder="Enter a caption..."
