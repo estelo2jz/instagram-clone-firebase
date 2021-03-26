@@ -19,7 +19,7 @@ function Post({ imageUrl, username, caption }) {
         src={imageUrl}
         alt="username-logo"
       />
-      <h4 className="post__text"><strong>estelo2jz </strong>
+      <h4 className="post__text"><strong>{username}</strong>
         {caption}
       </h4>
     </div>
