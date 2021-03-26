@@ -1,56 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import Post from './components/Post';
 
 function App() {
+  const [posts, setPosts] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <div className="app__header">
+        <img 
+          className="app__headerImage"
+          src="https://www.prnewsonline.com/Assets/Image/Instagram_Logo_Large.png"
+          alt="logo"
+        />
+      </div>
+      <Post 
+        username = "estelo2jz"
+        caption = "WOW it works"
+        imageUrl = "https://images.pexels.com/photos/1049622/pexels-photo-1049622.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+      />
+      <Post 
+        username = "mike005"
+        caption = "nice day at the beach"
+        imageUrl = "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      />
+      <Post 
+        username = "isabelaaa"
+        caption = "making food for my dog"
+        imageUrl = "https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      />
+
     </div>
   );
 }
